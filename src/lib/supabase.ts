@@ -1,14 +1,14 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://placeholder.supabase.co'
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'placeholder-key'
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.error('Supabase environment variables are missing. Please check your Supabase integration.')
-  throw new Error('Supabase configuration is incomplete. Please ensure VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY are set.')
-}
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+// Create client with placeholder values if environment variables are missing
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    persistSession: false
+  }
+})
 
 export type Database = {
   public: {
