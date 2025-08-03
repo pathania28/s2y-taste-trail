@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FreshFlow Design System - Agri-tech Food Delivery Platform
+All colors MUST be HSL for consistent theming across Customer, Vendor & Delivery apps.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Clean and fresh */
+    --background: 120 20% 98%;
+    --foreground: 140 100% 8%;
+
+    /* Card colors */
+    --card: 0 0% 100%;
+    --card-foreground: 140 100% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 100% 8%;
+
+    /* Primary - Fresh Green Brand */
+    --primary: 140 85% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 140 85% 30%;
+
+    /* Secondary - Warm Orange for accents */
+    --secondary: 25 95% 85%;
+    --secondary-foreground: 25 95% 15%;
+
+    /* Muted colors */
+    --muted: 120 15% 95%;
+    --muted-foreground: 140 15% 45%;
+
+    /* Accent - Vibrant orange for CTAs */
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Success & Error */
+    --success: 140 85% 35%;
+    --success-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & inputs */
+    --border: 120 20% 90%;
+    --input: 120 20% 96%;
+    --ring: 140 85% 35%;
+
+    /* App-specific colors */
+    --customer-primary: 140 85% 35%; /* Fresh green */
+    --vendor-primary: 220 85% 45%;   /* Professional blue */
+    --delivery-primary: 25 95% 55%;  /* Energetic orange */
+
+    /* Gradients */
+    --gradient-fresh: linear-gradient(135deg, hsl(140 85% 35%), hsl(120 70% 45%));
+    --gradient-vendor: linear-gradient(135deg, hsl(220 85% 45%), hsl(240 70% 55%));
+    --gradient-delivery: linear-gradient(135deg, hsl(25 95% 55%), hsl(45 85% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(140 85% 35%), hsl(25 95% 55%));
+
+    /* Shadows with brand colors */
+    --shadow-fresh: 0 10px 30px -10px hsl(140 85% 35% / 0.3);
+    --shadow-vendor: 0 10px 30px -10px hsl(220 85% 45% / 0.3);
+    --shadow-delivery: 0 10px 30px -10px hsl(25 95% 55% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-bounce: bounce 1s ease-in-out infinite;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
