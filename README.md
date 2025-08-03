@@ -97,14 +97,4 @@ This will generate a `dist/` folder which can be uploaded to your hosting servic
 
 ---
 
-## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-Feel free to fork this repo, contribute, or build your own amazing delivery app on top of it!
-
-```
-
----
